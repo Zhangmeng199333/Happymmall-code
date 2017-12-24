@@ -1,0 +1,30 @@
+{
+  "name": "mmall-fe",
+  "version": "1.0.0",
+  "description": "mma codes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/troublemaker121/happymmall.git"
+  },
+  "author": "YQ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/troublemaker121/happymmall/issues"
+  },
+  "homepage": "https://github.com/troublemaker121/happymmall#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "html-loader": "^0.5.1",
+    "html-webpack-plugin": "^2.30.1",
+    "style-loader": "^0.19.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^1.15.0",
+    "webpack-dev-server": "^2.9.7"
+  },
+  "dependencies": {}
+}
