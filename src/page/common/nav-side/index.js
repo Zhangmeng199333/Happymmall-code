@@ -13,8 +13,8 @@ var navSide = {
             {name:'about',desc:'关于MMall',href: './about.html'}
         ]
     },
-    init : function(option){
-        //合并选项
+    init : function(option){ // {v：123}
+        //合并选项 只有一个参数时，该参数就是该jQuery对象本身，如果有多个对象具有相同属性，后者会覆盖前者属性值
         $.extend(this.option,option);
         this.renderNav();
     },
