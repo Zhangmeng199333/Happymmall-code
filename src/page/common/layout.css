@@ -39,7 +39,24 @@ input[type='checkbox'] {
     /* 清除浮动 */
     overflow: hidden;
 }
+/* panel */
+.panel{
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
 
+.panel .panel-title{
+    font-size: 14px;
+    padding: 10px;
+    color: #666;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+}
+.panel .panel-body{
+    padding:10px;
+    overflow: hidden;
+}
 
 /* .large .w{
     width: 1600px;
@@ -93,10 +110,10 @@ input[type='checkbox'] {
 .loading{
     margin: 10px auto;
     display: block;
-    width: 125px;
-    height: 125px;
+    width: 65px;
+    height: 65px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    background: url(../../image/loading.gif) no-repeat;
+    background: url(../../image/icon/loading.gif) no-repeat;
     opacity: .6;
 }

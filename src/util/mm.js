@@ -2,11 +2,11 @@
  * @Author: YQ
  * @Date: 2017-12-24 14:03:53 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-12-28 18:25:14
+ * @Last Modified time: 2018-01-04 15:58:47
  */
 var Hogan = require('hogan.js');
 var conf = {
-    serverHost:''
+    serverHost:'http://www.happymmall.com:80'
 };
 var _mm = {
     //网络请求
@@ -30,11 +30,11 @@ var _mm = {
                 }
                 //请求成功，数据错误
                 else if(1 === res.status){
-                    typeof param.error === 'function' && param.error(res.data);                    
+                    typeof param.error === 'function' && param.error(res.msg);                    
                 }
             },
             //请求失败  404
-            error    :    function(){
+            error    :    function(err){
                 typeof param.error === 'function' && param.error(err.statusText);                                    
             },
         });
@@ -47,7 +47,7 @@ var _mm = {
     getUrlParam : function(name){
         var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
         var result = window.location.search.substr(1).match(reg);
-        return result ? decodeURICompotent(result[2]) : null;
+        return result ? decodeURIComponent(result[2]) : null;
     },
     //渲染HTML模板
     renderHtml : function(htmlTemplate,data){
@@ -82,7 +82,10 @@ var _mm = {
     //统一登录处理
     doLogin : function(){
         //跳转到登录页，
-        window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href);
+        window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href);
+    },
+    goHome : function(){
+        window.location.href = './index.html';
     }
 };
 module.exports = _mm;
