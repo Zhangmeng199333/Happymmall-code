@@ -95,8 +95,7 @@ var page = {
         // 删除单个商品
         $(document).on('click', '.cart-delete', function(){
             if(window.confirm('确认要删除该商品？')){
-                var productId = $(this).parents('.cart-table')
-                    .data('product-id');
+                var productId = $(this).parents('.cart-table').data('product-id');
                 _this.deleteCartProduct(productId);
             }
         });
@@ -107,8 +106,7 @@ var page = {
                     $selectedItem = $('.cart-select:checked');
                 // 循环查找选中的productIds
                 for(var i = 0, iLength = $selectedItem.length; i < iLength; i ++){
-                    arrProductIds
-                        .push($($selectedItem[i]).parents('.cart-table').data('product-id'));
+                    arrProductIds.push($($selectedItem[i]).parents('.cart-table').data('product-id'));
                 }
                 if(arrProductIds.length){
                     _this.deleteCartProduct(arrProductIds.join(','));
