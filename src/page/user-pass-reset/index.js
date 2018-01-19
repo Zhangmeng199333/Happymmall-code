@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2017-12-21 16:50:04 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2018-01-04 15:42:51
+ * @Last Modified time: 2018-01-17 15:42:25
  */
 
 require('./index.css');
@@ -15,7 +15,7 @@ var formError = {
         $('.error-item').show().find('.err-msg').text(errMsg);
     },
     hide: function () {
-        $('.error-item').show().find('.err-msg').text('');
+        $('.error-item').hide().find('.err-msg').text('');
     }
 };
 
@@ -102,7 +102,7 @@ var page = {
          //清除错误提示
         formError.hide();
         //做容器的切换
-        $('.step-username').hide().siblings('.step-question').show().find('.question').text(thsi.data.question);
+        $('.step-username').hide().siblings('.step-question').show().find('.question').text(this.data.question);
     }, 
     //找回密码  第三步 加载输入新密码
     loadStepPassword : function(){
